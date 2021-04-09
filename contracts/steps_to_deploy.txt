@@ -1,0 +1,7 @@
+Steps to Deploy
+--------------
+(1) Deploy TOWK Contract using deploy script.
+(2) Obtain TWOK Contract address from command line output.
+(3) Paste TWOK Contract address into rewardToken (Second param) of vault initializer
+(4) Deploy Vaults using deploy script.
+(5) After liquidity is addded, use Vault contract interface to set the lock token to the BNB/TWOK LP Token address.
