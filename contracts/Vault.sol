@@ -124,7 +124,10 @@ contract Vault is Initializable, OwnableUpgradeSafe {
         // Transfer lockToken tokens inside here while earning fees from every transfer
         uint256 approval = IERC20(lockToken).allowance(msg.sender, address(this));
         require(approval >= _amount, 'Vault: You must approve the desired amount of lockToken tokens to this contract first');
+        //FIX for inclusive fee tokens
+        uint256 initialAmount = IERC20(lockToken).balanceOf(address(this)); //FIX calculate the actual token balance for the SC
         IERC20(lockToken).transferFrom(msg.sender, address(this), _amount);
+        _amount = IERC20(lockToken).balanceOf(address(this)).sub(initialAmount); // FIX adjust the _amount var according to the receveid funds
         totalLiquidityLocked = totalLiquidityLocked.add(_amount);
         // Extract earnings in case the user is not a new Locked lockToken
         if (lastPriceEarningsExtracted[msg.sender] != 0 && lastPriceEarningsExtracted[msg.sender] != lockTokenFeePrice) {
