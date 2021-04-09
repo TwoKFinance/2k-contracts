@@ -1,0 +1,33 @@
+Steps to upgrade a contract
+
+1. Install the @openzeppelin/contracts-ethereum-package and @openzeppelin/truffle-upgrades since it contains the upgrade safe contracts
+2. Create your contract with those imports. Remember to not have constructor or variables initialized in the file
+3. Deploy your contract with truffle. Must be done in truffle. The deployment should look like this:
+    const { deployProxy } = require('@openzeppelin/truffle-upgrades')
+    const MyContract = artifacts.require('MyContract')
+    module.exports = async function(deployer) {
+        await deployProxy(MyContract, [], { deployer, initializer: 'initialize' });
+    }
+4. Notice the empty brackets where the initialize() variables will go if any. If not you must keep it empty without removing the bracket.
+5. Once the Proxy is deployed, you'll get the address from the console for the Proxy, not the contract underneath.
+6. What you'll do is go to etherscan, click on the code and click on "More Options" then "Is this a proxy?" and you'll be able to verify the contract underneath with `sol-merger` to your contract.
+7. If you used the optimizer make sure to get the exact runs number in the advanced options when verifying. The contract should verify if you use sol-merger. The number of runs is in the "Misc Options" when verifying a contract.
+8. Now to upgrade your contract, create a new file called MyContractV2.sol with the same logic + your additional or modified funcionality.
+9. Then modify the migrations like this:
+    const { upgradeProxy } = require('@openzeppelin/truffle-upgrades')
+    const MyContract = artifacts.require('MyContract')
+    const MyContractV2 = artifacts.require('MyContractV2')
+    module.exports = async function(deployer) {
+        const existing = await MyContract.deployed()
+        await upgradeProxy(existing.address, MyContractV2, { deployer })
+    }
+10. Notice the fact that we imported "upgradeProxy" not "deployProxy" since they are different. Then you should be able to deploy. You won't get an address in the console since it's the same as the previous one given that it uses a proxy. 
+11. Then you'll verify the new contract the same way with "Is this a proxy?" button and there you go! You just upgraded a contract successfully.
+
+
+TO deploy an upgradable contract in truffle test, do use the same format without the `deployer` variable, for instance:
+
+	testToken = await deployProxy(TestToken, [])
+	ytx = await deployProxy(YTXV3, [])
+
+Notice that there isn't a deployer variable. The initializer parameters go inside the brackets []

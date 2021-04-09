@@ -1,0 +1,15 @@
+Remember that the deployer will NOT be able to interact with the upgradable contracts since the transparent proxy pattern dictates that the admin() can only execute the upgrade functions and not the others. The admin is set in the upgradable contract when deployed.
+
+All the other accounts can interact with the contract normally.
+
+Because of this modifier:
+
+  modifier ifAdmin() {
+    if (msg.sender == _admin()) {
+      _;
+    } else {
+      _fallback();
+    }
+  }
+
+Meaning the admin() won't be able to interact with the contracts, rendering the onlyOwner modifier useless. To overcome this limitation, immediately replace the admin() address to a separate account which will manage the upgrades exclusively with the upgrades. INCORRECT. The admin can execute the fallback function meaning it can delegate calls. However when you call the upgradeTo() function and others required to upgrade a contract, the proxy will detect the admin address and execute the proxy function instead of delegating it to the underlying contract.

@@ -1,0 +1,8 @@
+1. Make sure the lockToken and rewardTokens are the right ones for the chain (could be testnet)
+2. Stake 10 rewardTokens to the Vault contract
+3. Approve 10 locktokens
+4. Execute lockLiquidity with 10 or 0.1 lockTokens
+4. Wait 10 blocks
+5. Execute extract earnings
+6. Check how many reward tokens you get and the dev treasury gets
+7. Check you can only extract the liquidity once the minimum time passes

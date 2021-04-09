@@ -1,0 +1,55 @@
+---INITIAL PRICE
+// a) Add 1e18 add since we need that to return the initial value added
+// b) The accomulated rewards when there weren't LPs yet
+// c) 1e18 The price padding to not get errors
+// d) The amount of LPs to be locked
+
+// a)    b)                     c)               d)
+1e18.add(accomulatedRewards.mul(pricePadding).div(_amount));
+1e17 * 1e18 / 1e19 + 1e18
+= 1e17 / 1e1 + 1e18
+= 1e16 + 1e18
+= 1.01e18
+
+
+earnings = amountLocked * price
+price = earnings / amountLocked
+earnings = amountLocked + correspondingFeeRewards
+
+price is based on amount locked + the rewards earned during that period
+when someone enters, he gets a token A which you get based on your contribution to the LP pool
+when you exit, chances are the price has increased since it increases when fees are added so now you will get more
+
+
+---EARNINGS
+// Since price is rewards / amountLocked, earnings is myAmountLocked * price
+ytxFee[msg.sender].mul(ytxFeePrice).div(pricePadding);
+= 9900990099009900000 * 11111010101010100000 / 1e18
+
+WHAT IF
+***amountLocked[msg.sender].mul(ytxFeePrice).div(pricePadding)***
+1e19 * 1.01e18 / 1e18
+= 1e19 * 1.01
+= 1.01e19
+
+
+---TOTAL YTX FEE MINED
+_amount.mul(pricePadding).div(ytxFeePrice);
+
+1e19 * 1e18 / 1.01e18
+= 1e37 / 1.01e18
+= 1e19 / 1.01
+= 9900990099009900000
+= about 9.9e18
+
+---UPDATED PRICE
+(newFeeAdded.mul(pricePadding).div(totalYtxFeeMined)).add(ytxFeePrice);
+
+WHAT IF
+***(newFeeAdded.mul(pricePadding).div(totalLOCKED)).add(ytxFeePrice);***
+(0.1e18 * 1e18 / 1e19) + 1.01e18
+= 0.01e18 + 1.01e18
+= 1.02e18
+
+SO there will be a pool of 0.2e18 earnings and a total of 1e19 LPs locked
+therefore earnings 1e19 * 1.02e18 / 1e18 = 1e19 * 1.02 = 1.02e19
