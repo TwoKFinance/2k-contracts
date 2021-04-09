@@ -1,0 +1,504 @@
+{
+  "manifestVersion": "3.1",
+  "impls": {
+    "616ad1af27dd005da44a071393f22b1eeaf878d5e5892dbed16ba6559cbacbd8": {
+      "address": "0xed48FE23778985e562bC3aD0E39a08c06C91592c",
+      "txHash": "0xf465d6780515feb0e65caefa5d1a6268ec1fd1768d63c69586621ab7bd94598b",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "initialized",
+            "type": "t_bool",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "initializing",
+            "type": "t_bool",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\Initializable.sol:26"
+          },
+          {
+            "contract": "Initializable",
+            "label": "______gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\Initializable.sol:61"
+          },
+          {
+            "contract": "ContextUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\GSN\\Context.sol:37"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\access\\Ownable.sol:18"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\access\\Ownable.sol:78"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "amountLocked",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:17"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "lastPriceEarningsExtracted",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:19"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "depositStarts",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:21"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "lockingTime",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:22"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "rewardToken",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:24"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "totalLiquidityLocked",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:26"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "totalLockTokenFeeMined",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:28"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "lockTokenFeePrice",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:29"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "accomulatedRewards",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:30"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "pricePadding",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:31"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "devTreasury",
+            "type": "t_address_payable",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:32"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "minTimeLock",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:33"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "maxTimeLock",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:34"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "minDevTreasuryPercentage",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:35"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "maxDevTreasuryPercentage",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:36"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "lastBlockFee",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:38"
+          },
+          {
+            "contract": "BNBVault",
+            "label": "rewardPerBlock",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\BNBVault.sol:39"
+          }
+        ],
+        "types": {
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_address_payable": {
+            "label": "address payable"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "3f1fce2548da4913824250c33525454a07d2dda374603c03bd6dba50e505a471": {
+      "address": "0xc4803010115D3A537D10064f2ABCCA6a0015F649",
+      "txHash": "0x78ee4f6adce3f7ce3781353dc729f5ab6db135751ebc44d61e8763fafc63e847",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "initialized",
+            "type": "t_bool",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "initializing",
+            "type": "t_bool",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\Initializable.sol:26"
+          },
+          {
+            "contract": "Initializable",
+            "label": "______gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\Initializable.sol:61"
+          },
+          {
+            "contract": "ContextUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\GSN\\Context.sol:37"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\access\\Ownable.sol:18"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "..\\@openzeppelin\\contracts-ethereum-package\\contracts\\access\\Ownable.sol:78"
+          },
+          {
+            "contract": "Vault",
+            "label": "amountLocked",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:17"
+          },
+          {
+            "contract": "Vault",
+            "label": "lastPriceEarningsExtracted",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:19"
+          },
+          {
+            "contract": "Vault",
+            "label": "depositStarts",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:21"
+          },
+          {
+            "contract": "Vault",
+            "label": "lockingTime",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:22"
+          },
+          {
+            "contract": "Vault",
+            "label": "lockToken",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:24"
+          },
+          {
+            "contract": "Vault",
+            "label": "rewardToken",
+            "type": "t_address",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:26"
+          },
+          {
+            "contract": "Vault",
+            "label": "totalLiquidityLocked",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:28"
+          },
+          {
+            "contract": "Vault",
+            "label": "totalLockTokenFeeMined",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:30"
+          },
+          {
+            "contract": "Vault",
+            "label": "lockTokenFeePrice",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:31"
+          },
+          {
+            "contract": "Vault",
+            "label": "accomulatedRewards",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:32"
+          },
+          {
+            "contract": "Vault",
+            "label": "pricePadding",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:33"
+          },
+          {
+            "contract": "Vault",
+            "label": "devTreasury",
+            "type": "t_address_payable",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:34"
+          },
+          {
+            "contract": "Vault",
+            "label": "minTimeLock",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:35"
+          },
+          {
+            "contract": "Vault",
+            "label": "maxTimeLock",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:36"
+          },
+          {
+            "contract": "Vault",
+            "label": "minDevTreasuryPercentage",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:37"
+          },
+          {
+            "contract": "Vault",
+            "label": "maxDevTreasuryPercentage",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:38"
+          },
+          {
+            "contract": "Vault",
+            "label": "lastBlockFee",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:40"
+          },
+          {
+            "contract": "Vault",
+            "label": "rewardPerBlock",
+            "type": "t_uint256",
+            "src": "..\\..\\..\\..\\..\\..\\C\\Users\\merun\\Desktop\\1k\\1k-contracts\\contracts\\Vault.sol:41"
+          }
+        ],
+        "types": {
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_address_payable": {
+            "label": "address payable"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          },
+          "t_bool": {
+            "label": "bool"
+          }
+        }
+      }
+    },
+    "7d23cba063988a7fa987c6897d766b5bab1ca943f5524ac3fc04a708201fc228": {
+      "address": "0x918F71EdCd37115aeb0B6a92b057880BBA030038",
+      "txHash": "0x33602ef3393cd922b30e64ebc6cc08099f7fc394c2911597a59208dfee835f74",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "initialized",
+            "type": "t_bool",
+            "src": "../@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:21"
+          },
+          {
+            "contract": "Initializable",
+            "label": "initializing",
+            "type": "t_bool",
+            "src": "../@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:26"
+          },
+          {
+            "contract": "Initializable",
+            "label": "______gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol:61"
+          },
+          {
+            "contract": "ContextUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "../@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol:37"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "../@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:18"
+          },
+          {
+            "contract": "OwnableUpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "../@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol:78"
+          },
+          {
+            "contract": "ERC20UpgradeSafe",
+            "label": "_balances",
+            "type": "t_mapping(t_address,t_uint256)",
+            "src": "ERC20UpgradeSafe.sol:37"
+          },
+          {
+            "contract": "ERC20UpgradeSafe",
+            "label": "_allowances",
+            "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+            "src": "ERC20UpgradeSafe.sol:39"
+          },
+          {
+            "contract": "ERC20UpgradeSafe",
+            "label": "_totalSupply",
+            "type": "t_uint256",
+            "src": "ERC20UpgradeSafe.sol:41"
+          },
+          {
+            "contract": "ERC20UpgradeSafe",
+            "label": "_name",
+            "type": "t_string_storage",
+            "src": "ERC20UpgradeSafe.sol:42"
+          },
+          {
+            "contract": "ERC20UpgradeSafe",
+            "label": "_symbol",
+            "type": "t_string_storage",
+            "src": "ERC20UpgradeSafe.sol:43"
+          },
+          {
+            "contract": "ERC20UpgradeSafe",
+            "label": "_decimals",
+            "type": "t_uint8",
+            "src": "ERC20UpgradeSafe.sol:44"
+          },
+          {
+            "contract": "ERC20UpgradeSafe",
+            "label": "__gap",
+            "type": "t_array(t_uint256)44_storage",
+            "src": "ERC20UpgradeSafe.sol:316"
+          },
+          {
+            "contract": "TWOK",
+            "label": "isFrozen",
+            "type": "t_mapping(t_address,t_bool)",
+            "src": "TWOK.sol:15"
+          },
+          {
+            "contract": "TWOK",
+            "label": "transferFee",
+            "type": "t_uint256",
+            "src": "TWOK.sol:16"
+          },
+          {
+            "contract": "TWOK",
+            "label": "lockLiquidityContract",
+            "type": "t_address",
+            "src": "TWOK.sol:17"
+          },
+          {
+            "contract": "TWOK",
+            "label": "devTreasury",
+            "type": "t_address",
+            "src": "TWOK.sol:18"
+          },
+          {
+            "contract": "TWOK",
+            "label": "devTreasuryPercentage",
+            "type": "t_uint256",
+            "src": "TWOK.sol:19"
+          }
+        ],
+        "types": {
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+            "label": "mapping(address => mapping(address => uint256))"
+          },
+          "t_string_storage": {
+            "label": "string"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_array(t_uint256)44_storage": {
+            "label": "uint256[44]"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    }
+  },
+  "admin": {
+    "address": "0x3D8D4a3c44D2298216E06762F11c7cE973665864",
+    "txHash": "0xab2a9c0555a85d9a982dda7635708b54d9b2b560b9daccec793401b899832c68"
+  }
+}
